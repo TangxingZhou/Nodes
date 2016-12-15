@@ -33,6 +33,7 @@
             <form id="login-form" method="post" onsubmit="return checkForm()">
                 <input type="text" id="username" name="username">
                 <input type="password" id="password" name="password">
+                <input type="hidden" id="md5-password" name="password">
                 <button type="submit">Submit</button>
             </form>
         </div>
@@ -47,6 +48,12 @@
             //p.style.color = '#ff0000';
             //p.style.fontSize = '20px';
             //p.style.paddingTop = '2em';
+            function checkForm() {
+                var input_pwd = document.getElementById('input-password');
+                var md5_pwd = document.getElementById('md5-password');
+                md5_pwd.value = toMD5(input_pwd.value);
+                return true;
+            }
         </script>
     </body>
 </html>
