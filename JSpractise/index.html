@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Hello</title>
+    </head>
+    <body>
+        <!--script>
+            alert(navigator.platform)
+        </script-->
+        <div>Hello, World!</div>
+        <div id="test-div">
+            <div class="c-red">
+                <p id="test-p">JavaScript</p>
+                <p>Java</p>
+            </div>
+            <div class="c-red c-green">
+                <p>Python</p>
+                <p>Ruby</p>
+                <p>Swift</p>
+            </div>
+            <div class="c-green">
+                <p>Scheme</p>
+                <p>Haskell</p>
+            </div>
+            <ol id="test-list">
+                <li class="lang">Scheme</li>
+                <li class="lang">JavaScript</li>
+                <li class="lang">Python</li>
+                <li class="lang">Ruby</li>
+                <li class="lang">Haskell</li>
+            </ol>
+            <form id="login-form" method="post" onsubmit="return checkForm()">
+                <input type="text" id="username" name="username">
+                <input type="password" id="password" name="password">
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+        <script>
+            var p = document.getElementById('test-p');
+            var list = document.getElementById('test-list');
+            var c = document.createElement('p');
+            c.id = 'C'
+            c.innerText = 'C'
+            list.appendChild(c)
+            //p.innerText = 'I love js';
+            //p.style.color = '#ff0000';
+            //p.style.fontSize = '20px';
+            //p.style.paddingTop = '2em';
+        </script>
+    </body>
+</html>
