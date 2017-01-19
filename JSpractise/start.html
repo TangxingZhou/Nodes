@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Start to learn JavaScript</title>
+        <script
+            src="http://code.jquery.com/jquery-3.1.1.min.js"
+            integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+            crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <script type="text/javascript" src="start.js"></script>
+        <link rel="stylesheet" type="text/css" href="main.css" >
+        <p style="color: red; font-size: 30px">Fighting!</P>
+        <p class="normal">Hello CSS!</p>
+        <script>
+            var ming = new Student('Xiao Ming', 1992);
+            var hong = new Student('Xiao Hong', 1991);
+            //alert(ming.age());
+            //alert(hong.age())
+            //alert(ming.age===hong.age);
+            /*var F = function () {};
+            F.prototype = Student.prototype;
+            PrimaryStudent.prototype = new F();
+            PrimaryStudent.prototype.constructor = PrimaryStudent;*/
+            inherits(PrimaryStudent, Student);
+            PrimaryStudent.prototype.get_grade = function () {
+                return this.grade;
+            };
+            var long = new PrimaryStudent('Xiao Long', 1995, 2);
+            var gang = new MiddleStudent('Xiao Gang', 1993, {Chinese: 89, Math: 95, English: 76});
+            alert(gang.age());
+            //alert(long.get_grade());
+            //alert(long instanceof Student);
+            alert(gang.score('Math'));
+            
+        </script>
+        <a href="http://www.w3school.com.cn/" target="_blank">Visit W3School!</a>
+    </body>
+</html>
